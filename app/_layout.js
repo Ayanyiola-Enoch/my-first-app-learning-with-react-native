@@ -1,38 +1,30 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button, Image, ScrollView, StyleSheet } from "react-native";
 
-const firsst = () => {
+// Component name should be capitalized
+const End = () => {
     return (
-        <View style={{
-            marginLeft: 50,
-        }}>
-            <Text style={{
-                color: 'green',
-                height: 100,
-                marginTop: 40,
-                marginLeft: 20,
-            }}>Hi, First app coming</Text>
-            <Text>Favour is the best mobile developer tutor</Text>
+        <View style={esther.app}>
+            <Text style={{ color: 'purple', fontSize: 50 }}>StudyPadi</Text>
 
-            <View style={{
-                marginLeft:40,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: 30,
-                backgroundColor: 'yellow',
-                width: 100,
-                height: 100,
-            }}>
-                <Text>Thanks</Text>
-                <Text>A</Text>
-                <Text>Lot</Text>
-                <Text>Sir</Text>
-            </View>
-
+            <ScrollView>
+                <View>
+                    <Text>Questions</Text>
+                    <Image source={require("../assets/images/studyy.png")} style={{ width: 200, height: 100, borderRadius: 10 }} />
+                </View>
+                <View>
+                    <Button title="Check here" />
+                    <Text>Others</Text>
+                    <Image source={require("../assets/images/gg.png")} style={{ width: 257, height: 200, borderRadius: 10  }} />
+                </View>
+            </ScrollView>
         </View>
     );
-
-
 };
-export default firsst;
+
+// Ensure the component is exported with the correct name
+export default End;
+
+const esther = StyleSheet.create({
+    app: { flex: 1, paddingTop: 20, paddingHorizontal: 20, }
+});

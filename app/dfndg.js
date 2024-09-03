@@ -4,11 +4,11 @@ import {View, Text, Button, ScrollView, StyleSheet} from 'react-native';
 const end = () => {
     return(
         <View style = {esther.app}>
-            <Text>StudyPadi</Text>
+            <Text style={{color: 'purple', fontSize: 20}}>StudyPadi</Text>
 
             <ScrollView>
                 <View>
-                    <Text>Questions</Text>
+                    <Text style= {{paddingTop: 100}}>Questions</Text>
                     <Image source = {require("../assets/images/studyy.png")} style = {{witdth: 200, height: 300, borderRadius: 10 }}/>
                 </View>
                 <View>
@@ -24,5 +24,5 @@ const end = () => {
 export default end;
 
 const esther = StyleSheet.create({
-    app:{width: 400, height}
+    app:{flex: 1, paddingTop: 20, paddingHorizontal: 20}
 })
