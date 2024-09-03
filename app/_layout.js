@@ -5,17 +5,25 @@ import { View, Text, Button, Image, ScrollView, StyleSheet } from "react-native"
 const End = () => {
     return (
         <View style={esther.app}>
-            <Text style={{ color: 'purple', fontSize: 50 }}>StudyPadi</Text>
+            <Text style={{ color: 'purple', fontSize: 30, textDecorationLine:"underline", }}>StudyPadi</Text>
 
             <ScrollView>
-                <View>
-                    <Text>Questions</Text>
-                    <Image source={require("../assets/images/studyy.png")} style={{ width: 200, height: 100, borderRadius: 10 }} />
+                <View style = {{marginTop:30}}>
+                    <Text style = {{marginBottom:18, marginTop:20, fontSize: 17}}>Dashboard View</Text>
+                    <Image source={require("../assets/images/studyy.png")} style={{ width: 310, height: 290, objectFit:"fill" , borderRadius: 10 }} />
                 </View>
-                <View>
-                    <Button title="Check here" />
-                    <Text>Others</Text>
-                    <Image source={require("../assets/images/gg.png")} style={{ width: 257, height: 200, borderRadius: 10  }} />
+                <View style = {{marginTop:20, marginBottom:30}}>
+                    <Button title="Check Site"/>
+                </View>
+
+                <View style={{marginBottom:20}}>
+                    <Text style={{fontSize:17, marginTop:20, marginBottom:20}}>Questions</Text>
+                    <Image source={require("../assets/images/gg.png")} style={{ width: 337, objectFit:"fill", height: 290, borderRadius: 10  }}/>
+                </View>
+
+                <View style={{marginTop:20, marginBottom:20}}>
+                    <Text style={{fontSize:17,marginBottom:18, marginTop:20}}>Behind the scene </Text>
+                    <Image source ={require("../assets/images/t.png")} style = {{width:350, height:280,  objectFit: "fill", borderRadius: 10}}/>
                 </View>
             </ScrollView>
         </View>
@@ -26,5 +34,5 @@ const End = () => {
 export default End;
 
 const esther = StyleSheet.create({
-    app: { flex: 1, paddingTop: 20, paddingHorizontal: 20, }
+    app: { flex: 1, paddingTop: 40, paddingHorizontal: 20, backgroundColor: "whitesmoke"}
 });
