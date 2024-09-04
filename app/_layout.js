@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, Image, ScrollView, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, Image, ScrollView, StyleSheet } from "react-native";
 
 // Component name should be capitalized
 const End = () => {
@@ -14,11 +14,12 @@ const End = () => {
                 </View>
                 <View style = {{marginTop:20, marginBottom:30}}>
                     <Button title="Check Site"/>
+                    <TextInput style= {{height:30}} placeholder='Put in your number' keyboardType="numeric" ></TextInput>
                 </View>
 
                 <View style={{marginBottom:20}}>
                     <Text style={{fontSize:17, marginTop:20, marginBottom:20}}>Questions</Text>
-                    <Image source={require("../assets/images/gg.png")} style={{ width: 337, objectFit:"fill", height: 290, borderRadius: 10  }}/>
+                    <Image source={require("../assets/images/gg.png")} style={{ width: 337, objectFit:"fill", height: 266, borderRadius: 10  }}/>
                 </View>
 
                 <View style={{marginTop:20, marginBottom:20}}>
