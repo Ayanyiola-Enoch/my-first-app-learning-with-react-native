@@ -14,7 +14,7 @@ const End = () => {
                 </View>
                 <View style = {{marginTop:20, marginBottom:30}}>
                     <Button title="Check Site"/>
-                    <TextInput style= {{height:30}} placeholder='Put in your number' keyboardType="numeric" ></TextInput>
+                    <TextInput style= {{height:30}} placeholder='Put in your phone number' keyboardType="numeric" ></TextInput>
                 </View>
 
                 <View style={{marginBottom:20}}>
