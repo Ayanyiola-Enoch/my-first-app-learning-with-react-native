@@ -1,12 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 
 const _layout = () => {
   return (
     <View style={styles.page}>
-        <View style={styles.box}>
-            <Text style={{fontSize:30, color:'black', fontWeight:'bold' }}>BOLD</Text>
+        <View style={{justifyContent:'flex-start'}}>
+            <View style={styles.box}>
+                <Text style={{fontSize:30, color:'white', fontWeight:'bold' }}>Square</Text>
+            </View>
+
         </View>
+            <View style={styles.circle}>
+                <Text style={{fontSize:30, color:'white', fontWeight: 'bold'}}>Circle</Text>
+            </View>
+
+            <View style={styles.triangle}>
+                <Image source = {require('../assets/images/triangle.png')} style={{width:240, height:200,}} />
+            </View>
     </View>
   )
 }
@@ -16,7 +26,7 @@ export default _layout;
 const styles = StyleSheet.create({
     page:{
         flex: 1,
-        paddingTop: 20,
+        paddingTop: 40,
         backgroundColor: '#ffff',
         alignItems: 'flex-end',
         // justifyContent: 'center'
@@ -26,6 +36,26 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
         backgroundColor: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 100
+    },
+    circle:{
+        width: 150,
+        height: 150,
+        borderRadius: 100,
+        backgroundColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf:'center',
+        marginBottom:70
+    
+
+    },
+    triangle:{
+        alignSelf:'flex-start',
+
+    
     }
 })
 
