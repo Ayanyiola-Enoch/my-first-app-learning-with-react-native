@@ -10,16 +10,17 @@ const _layout = () => {
       <Text style ={{fontSize:30, fontWeight:'bold', color:'black', marginBottom:20}}>List Class</Text>
 
     <FlatList 
-        data={contain}
-
-        renderItem={({item})=>{
-            return(
-                <View style={styles.container}>
-                    <Text style={{fontSize:20, color:'black', fontWeight:'bold'}}>{item}</Text>
-                </View>
-            )
-        }}
-    />          
+    data={contain}
+    numColumns={4}
+    columnWrapperStyle={{justifyContent:'space-between'}}
+    renderItem={({item})=>{
+        return(
+            <View style={styles.container}>
+                <Text style={{fontSize:19, color: 'black'}}>{item}</Text>
+            </View>
+        )
+    }}
+    />
 
     </View>
   )
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
 
   container:{
     height:40,
+    paddingHorizontal:6,
     borderWidth:1,
     borderRadius:5,
     justifyContent: 'center',
