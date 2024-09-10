@@ -1,4 +1,94 @@
+import { StyleSheet, Text, View, Image, FlatList } from "react-native";
+import React from "react";
 
+const _layout = () => {
+
+  const profiles =[
+    {
+      id:1,
+      profilePicture: require("../assets/images/enoch.jpg"),
+      profileName: 'Enoch'
+    },
+    {
+      id:2,
+      profilePicture: require("../assets/images/medium-shot-male-flight-attendant-posing.jpg"),
+      profileName: 'Ade'
+    },
+    {
+      id:3,
+      profilePicture: require("../assets/images/im2.jpg"),
+      profileName: 'Favour'
+    },
+    {
+      id:4,
+      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      profileName: 'Ayo'
+    },
+    {
+      id:4,
+      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      profileName: 'Ayo'
+    },
+    {
+      id:4,
+      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      profileName: 'Ayo'
+    },
+    {
+      id:4,
+      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      profileName: 'Ayo'
+    },
+
+
+  ]
+
+  return (
+    <View style={styles.page}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', padding:10 }}>
+        <Text style={{ fontSize: 27, color: 'white', flex: 1 }}>WA Business</Text>
+          <Image source={require("../assets/icons/cameraaa.png")} style={{ width: 30, height: 30, marginRight:10 }} />
+          <Image source={require("../assets/icons/searchhh.png")} style={{ width: 30, height: 30, marginRight:10 }} />
+          <Image source={require("../assets/icons/menu.png")} style={{ width: 30, height: 30 }} />
+      </View>
+
+
+      <View style={{marginTop:10}}>
+        <Text style={{marginBottom:22, fontSize:23, fontWeight: '400', color:'white' }}>Status</Text>
+        <View style>
+          <FlatList 
+          data={profiles}
+          horizontal={true}
+          showsHorizontalScrollIndicator={true}
+          renderItem={({item})=>{
+            return(
+              <View style={{justifyContent:'center'}}>
+                <Image source={item.profilePicture} style={{width: 50, height:50, borderRadius:50, marginRight:17 }}/>
+                <Text style={{ fontSize:15,  color:'white'}}>{item.profileName}</Text>
+              </View>
+            )
+          }}
+          />
+        </View>
+      </View>
+
+
+
+    </View>
+  );
+};
+
+export default _layout;
+
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: '#1f3040',
+    padding: 20,
+    paddingHorizontal: 20,
+  },
+
+});
 
 //profile scheme code below
 // import { StyleSheet, Text, View, Image, FlatList } from "react-native";
@@ -64,11 +154,11 @@
 
 //     <View style={{marginTop:40}}>
 
-//       <FlatList 
+//       <FlatList
 //       data={contents}
 //       renderItem={({item})=>{
 //         return(
-//           <View style={{flexDirection:'row', alignItems:'center', marginBottom:29}}> 
+//           <View style={{flexDirection:'row', alignItems:'center', marginBottom:29}}>
 //               <Image source={item.iconName} style={{width:21, height:25,}}/>
 //               <Text style={{marginLeft:29, fontSize:16, flex:1}}>{item.title}</Text>
 //               <Image source={require('../assets/icons/righhhhyyyyyy.png')} style={{width:15, height:20
@@ -86,12 +176,8 @@
 //         </View>
 //       </View>
 
-
-
-
 //     </View>
 
-      
 //   );
 // };
 
@@ -106,11 +192,6 @@
 //   },
 
 // });
-
-
-
-
-
 
 // import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
 // import React from 'react'
