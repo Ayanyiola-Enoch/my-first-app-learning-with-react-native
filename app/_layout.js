@@ -2,33 +2,38 @@ import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react
 import React from 'react'
 
 const _layout = () => {
-    const message =['Like','dislike']
+    const message =['Like','Dislike','Share', 'Remix', 'Thanks','Download']
   return (
     <View style={styles.page}>
       <Text style={{fontSize:20, fontWeight:'bold', color:'white'}}>10 LEGENDARY CapCut Editing Tips!</Text>
       <Text style={{color:'grey'}}>938K viewa 2y ago <Text style={{fontWeight:'bold', color:'white'}}>----more</Text></Text>
 
       <View>
-        <View>
+        <View style ={{marginTop: 40}}>
             <Image source = {require('../assets/images/enoch.jpg')} style={{width:20, height:20, borderRadius:20}} />
+      
     
         </View>
       </View>
       <FlatList 
       data={message}
+      // numColumns={5}
+    // columnWrapperStyle={{justifyContent:'space-between'}}
+    horizontal={true}
+    showsHorizontalScrollIndicator ={true}
+      
       renderItem={({item})=>{
         return(
             <TouchableOpacity style={styles.container}>
-                {/* <Image source={require('../assets/images/like.png')} style={{width:20, height:20, marginLeft:10}} /> */}
                 <Text style={{color:'white', marginLeft:10}}>{item}</Text>
             </TouchableOpacity>
-        )   
+        )  
       }}/>
     </View>
   )
 }
 
-export default _layout
+export default _layout;
 
 const styles = StyleSheet.create({
     page:{
@@ -37,6 +42,18 @@ const styles = StyleSheet.create({
         backgroundColor:'black',
         paddingHorizontal: 20,
     },
+    container:{
+      borderWidth: 1,
+      borderColor:'white',
+      borderRadius: 10,
+      padding:5,
+      width:86,
+      height:38,
+      marginRight: 10,
+      alignItems:'center',
+      justifyContent: 'center'
+
+    }
 
 
 })
