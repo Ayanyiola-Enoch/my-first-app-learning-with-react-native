@@ -1,96 +1,116 @@
-import { StyleSheet, Text, View, Image, FlatList } from "react-native";
-import React from "react";
-
-const _layout = () => {
-
-  const contents =[
-    {
-      id:1,
-      title: "Personal Data",
-      iconName: require("../assets/icons/profile.png"),
-    },
-    {
-      id:2,
-      title: "Settings",
-      iconName: require("../assets/icons/settings.png"),
-    },
-    {
-      id:3,
-      title: "E-Statement",
-      iconName: require("../assets/icons/note.png"),
-    },
-    {
-      id:4,
-      title: "Refferal Code",
-      iconName: require("../assets/icons/icons8-love-100.png"),
-    },
-    {
-      id:5,
-      title: "Help",
-      iconName: require("../assets/icons//faw.png"),
-    },
-    {
-      id:6,
-      title: "Our Handbook",
-      iconName: require("../assets/icons/handbbook.png"),
-    }
-  ]
-
-  return (
-    <View style={styles.page}>
-      {/* header */}
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Image
-          source={require("../assets/images/enoch.jpg")}
-          style={{ width: 40, height: 40, borderRadius: 10 }}
-        />
-        <View style={{marginLeft:10}}>
-          <Text style={{ fontSize:17, color:'black', fontWeight:'bold' }}>Ayanyiola Enoch</Text>
-          <Text style={{ fontSize:14, color: "black", fontSize: 9 }}>
-            Mobile App Developer
-          </Text>
-        </View>
-      </View>
-
-      {/* LIST  */}
-
-    <View style={{marginTop:40}}>
-
-      <FlatList 
-      data={contents}
-      renderItem={({item})=>{
-        return(
-          <View style={{flexDirection:'row', alignItems:'center', marginBottom:20}}> 
-              <Image source={item.iconName} style={{width:30, height:30,}}/>
-              <Text style={{marginLeft:20, flex:1}}>{item.title}</Text>
-              <Image source={require('../assets/icons/righhhhyyyyyy.png')} style={{width:15, height:20
-              }}/>
-          </View>
-        )
-      }}
-      />
-      </View>
 
 
+//profile scheme code below
+// import { StyleSheet, Text, View, Image, FlatList } from "react-native";
+// import React from "react";
+
+// const _layout = () => {
+
+//   const contents =[
+//     {
+//       id:1,
+//       title: "Personal Data",
+//       iconName: require("../assets/icons/profile.png"),
+//     },
+//     {
+//       id:2,
+//       title: "Settings",
+//       iconName: require("../assets/icons/settings.png"),
+//     },
+//     {
+//       id:3,
+//       title: "E-Statement",
+//       iconName: require("../assets/icons/note.png"),
+//     },
+//     {
+//       id:4,
+//       title: "Refferal Code",
+//       iconName: require("../assets/icons/icons8-love-100.png"),
+//     },
+//     {
+//       id:5,
+//       title: "Help",
+//       iconName: require("../assets/icons//faw.png"),
+//     },
+//     {
+//       id:6,
+//       title: "Our Handbook",
+//       iconName: require("../assets/icons/handbbook.png"),
+//     },
+//     {
+//       id:7,
+//       title: "Community",
+//       iconName: require("../assets/icons/community.png"),
+//     },
+//   ]
+
+//   return (
+//     <View style={styles.page}>
+//       {/* header */}
+//       <View style={{ flexDirection: "row", alignItems: "center" }}>
+//         <Image
+//           source={require("../assets/images/enoch.jpg")}
+//           style={{width: 70, height: 65, borderRadius: 10 }}
+//         />
+//         <View style={{marginLeft:10}}>
+//           <Text style={{ fontSize:22, color:'black', fontWeight:'bold' }}>Ayanyiola Enoch</Text>
+//           <Text style={{ fontSize:16, color: "black", }}>
+//             Mobile App Developer
+//           </Text>
+//         </View>
+//       </View>
+
+//       {/* LIST  */}
+
+//     <View style={{marginTop:40}}>
+
+//       <FlatList 
+//       data={contents}
+//       renderItem={({item})=>{
+//         return(
+//           <View style={{flexDirection:'row', alignItems:'center', marginBottom:29}}> 
+//               <Image source={item.iconName} style={{width:21, height:25,}}/>
+//               <Text style={{marginLeft:29, fontSize:16, flex:1}}>{item.title}</Text>
+//               <Image source={require('../assets/icons/righhhhyyyyyy.png')} style={{width:15, height:20
+//               }}/>
+//           </View>
+//         )
+//       }}
+//       />
+//       </View>
+
+//       <View style={{paddingHorizontal:30, marginTop:20, borderWidth:1, borderRadius:17, padding:20 }}>
+//         <View style={{flexDirection:'row', alignItems:'center'}}>
+//       <Image source={require('../assets/icons/headset.png')} style={{width:26, height:23}}/>
+//         <Text style={{marginLeft:20}}>Feel free to Ask, We Ready to Help</Text>
+//         </View>
+//       </View>
 
 
-    </View>
+
+
+//     </View>
 
       
-  );
-};
+//   );
+// };
 
-export default _layout;
+// export default _layout;
 
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingTop: 20,
-    paddingHorizontal: 20,
-  },
+// const styles = StyleSheet.create({
+//   page: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     paddingTop: 20,
+//     paddingHorizontal: 20,
+//   },
 
-});
+// });
+
+
+
+
+
 
 // import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
 // import React from 'react'
