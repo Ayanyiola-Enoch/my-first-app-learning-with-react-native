@@ -3,11 +3,13 @@ import React from "react";
 
 const _layout = () => {
 
+  // Array of items
+
   const profiles =[
     {
       id:1,
       profilePicture: require("../assets/images/enoch.jpg"),
-      profileName: 'Enoch'
+      profileName: 'My Status'
     },
     {
       id:2,
@@ -25,26 +27,32 @@ const _layout = () => {
       profileName: 'Ayo'
     },
     {
-      id:4,
-      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      id:5,
+      profilePicture: 'https://img.freepik.com/free-photo/portrait-shy-afroamerican-lady_23-2148440604.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
       profileName: 'Ayo'
     },
     {
-      id:4,
+      id:6,
       profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
-      profileName: 'Ayo'
+      profileName: 'Bola'
     },
     {
-      id:4,
-      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
-      profileName: 'Ayo'
+      id:7,
+      profilePicture: require('../assets/images/medium-shot-male-flight-attendant-posing.jpg'),
+      profileName: 'Evra'
     },
 
 
   ]
 
   return (
+
+  
+
     <View style={styles.page}>
+
+    {/* Topmenu */}
+
       <View style={{ flexDirection: 'row', alignItems: 'center', padding:10 }}>
         <Text style={{ fontSize: 27, color: 'white', flex: 1 }}>WA Business</Text>
           <Image source={require("../assets/icons/cameraaa.png")} style={{ width: 30, height: 30, marginRight:10 }} />
@@ -52,6 +60,7 @@ const _layout = () => {
           <Image source={require("../assets/icons/menu.png")} style={{ width: 30, height: 30 }} />
       </View>
 
+    {/* Flatlist */}
 
       <View style={{marginTop:10}}>
         <Text style={{marginBottom:22, fontSize:23, fontWeight: '400', color:'white' }}>Status</Text>
@@ -62,7 +71,7 @@ const _layout = () => {
           showsHorizontalScrollIndicator={true}
           renderItem={({item})=>{
             return(
-              <View style={{justifyContent:'center'}}>
+              <View style={{alignItems:'center', justifyContent:'center'}}>
                 <Image source={item.profilePicture} style={{width: 50, height:50, borderRadius:50, marginRight:17 }}/>
                 <Text style={{ fontSize:15,  color:'white'}}>{item.profileName}</Text>
               </View>
@@ -72,23 +81,74 @@ const _layout = () => {
         </View>
       </View>
 
+      <View style={{flexDirection:'row',justifyContent:'center',  alignItems:'center', marginTop:19, padding:8, borderColor:'grey', borderWidth:1, borderRadius:33}}>
+        <Image source={require('../assets/icons/spekerrr.png')} style={{width:29, height:29 }}/>
+        <Text style={{marginLeft:9, color:'green', fontSize:18, fontWeight:'bold'}}>Boost status</Text>
+      </View>
 
 
-    </View>
+ 
+      {/* Horizontal line */}
+      <View style={styles.line}>
+
+      </View>
+      
+      <View style={{marginTop:20, flexDirection:'row', alignItems:'center'}}>
+        <Text style={{color:'white', fontSize:20, fontWeight:'bold', flex:1}}>Channels</Text>
+        <Text style={{fontSize:18, color:'green'}}>Explore </Text>
+        <Image source ={require('../assets/icons/green arr.png')} style={{Width:20, height:20}}/>
+      </View>
+
+      <View>
+          
+      </View>
+
+
+      </View>
   );
 };
+
 
 export default _layout;
 
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: '#1f3040',
+    backgroundColor: '#121b22',
     padding: 20,
     paddingHorizontal: 20,
   },
 
+  line: {
+    marginTop:20,
+    height: 1,  
+    width: '100%',
+    backgroundColor: 'white', 
+
+  }
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //profile scheme code below
 // import { StyleSheet, Text, View, Image, FlatList } from "react-native";
