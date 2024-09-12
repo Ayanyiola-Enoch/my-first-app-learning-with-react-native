@@ -1,43 +1,90 @@
-import { StyleSheet, Text, View, Image, FlatList } from "react-native";
+import { StyleSheet, Text, View, Image, FlatList, ScrollView } from "react-native";
 import React from "react";
 
 const _layout = () => {
 
+  const channels = [
+    {
+      id: 1,
+      statusPicture: require('../assets/images/food.jpg'),
+      title: "CHAMP TUTORIALS",
+      message: "welcome...welcome..and.."
+
+    },
+    {
+      id: 2,
+      statusPicture: require('../assets/images/im2.jpg'),
+      title: "NEWS & UPDATES",
+      message: "check out our latest news...",
+      time: '3:30 PM'
+    },
+    {
+      id: 3,
+      statusPicture: require('../assets/images/im2.jpg'),
+      title: "Tech UPDATES",
+      message: "check out our latest Updates...",
+      time: '3:35 PM'
+    },
+    {
+      id: 4,
+      statusPicture: require('../assets/images/im2.jpg'),
+      title: "Pulse Nigeria",
+      message: "check out our latest news...",
+      time: '3:39 PM'
+    },
+    {
+      id: 5,
+      statusPicture: require('../assets/images/im2.jpg'),
+      title: "Pulse Nigeria",
+      message: "check out our latest news...",
+      time: '3:40 PM'
+    },
+    {
+      id: 6,
+      statusPicture: require('../assets/images/im2.jpg'),
+      title: "Pulse Nigeria",
+      message: "check out our latest news...",
+      time: '3:44 PM'
+    },
+
+  ]
+
+
   // Array of items
 
-  const profiles =[
+  const profiles = [
     {
-      id:1,
+      id: 1,
       profilePicture: require("../assets/images/enoch.jpg"),
       profileName: 'My Status'
     },
     {
-      id:2,
+      id: 2,
       profilePicture: require("../assets/images/medium-shot-male-flight-attendant-posing.jpg"),
       profileName: 'Ade'
     },
     {
-      id:3,
+      id: 3,
       profilePicture: require("../assets/images/im2.jpg"),
       profileName: 'Favour'
     },
     {
-      id:4,
+      id: 4,
       profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
       profileName: 'Ayo'
     },
     {
-      id:5,
+      id: 5,
       profilePicture: 'https://img.freepik.com/free-photo/portrait-shy-afroamerican-lady_23-2148440604.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
       profileName: 'Ayo'
     },
     {
-      id:6,
+      id: 6,
       profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
       profileName: 'Bola'
     },
     {
-      id:7,
+      id: 7,
       profilePicture: require('../assets/images/medium-shot-male-flight-attendant-posing.jpg'),
       profileName: 'Evra'
     },
@@ -47,64 +94,82 @@ const _layout = () => {
 
   return (
 
-  
+
 
     <View style={styles.page}>
 
-    {/* Topmenu */}
+      {/* Topmenu */}
 
-      <View style={{ flexDirection: 'row', alignItems: 'center', padding:10 }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', padding: 10 }}>
         <Text style={{ fontSize: 27, color: 'white', flex: 1 }}>WA Business</Text>
-          <Image source={require("../assets/icons/cameraaa.png")} style={{ width: 30, height: 30, marginRight:10 }} />
-          <Image source={require("../assets/icons/searchhh.png")} style={{ width: 30, height: 30, marginRight:10 }} />
-          <Image source={require("../assets/icons/menu.png")} style={{ width: 30, height: 30 }} />
+        <Image source={require("../assets/icons/cameraaa.png")} style={{ width: 30, height: 30, marginRight: 10 }} />
+        <Image source={require("../assets/icons/searchhh.png")} style={{ width: 30, height: 30, marginRight: 10 }} />
+        <Image source={require("../assets/icons/menu.png")} style={{ width: 30, height: 30 }} />
       </View>
 
-    {/* Flatlist */}
+      {/* Flatlist */}
 
-      <View style={{marginTop:10}}>
-        <Text style={{marginBottom:22, fontSize:23, fontWeight: '400', color:'white' }}>Status</Text>
+      <View style={{ marginTop: 10 }}>
+        <Text style={{ marginBottom: 22, fontSize: 23, fontWeight: '400', color: 'white' }}>Status</Text>
         <View style>
-          <FlatList 
-          data={profiles}
-          horizontal={true}
-          showsHorizontalScrollIndicator={true}
-          renderItem={({item})=>{
-            return(
-              <View style={{alignItems:'center', justifyContent:'center'}}>
-                <Image source={item.profilePicture} style={{width: 50, height:50, borderRadius:50, marginRight:17 }}/>
-                <Text style={{ fontSize:15,  color:'white'}}>{item.profileName}</Text>
-              </View>
-            )
-          }}
+          <FlatList
+            data={profiles}
+            horizontal={true}
+            showsHorizontalScrollIndicator={true}
+            renderItem={({ item }) => {
+              return (
+                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                  <Image source={item.profilePicture} style={{ width: 50, height: 50, borderRadius: 50, marginRight: 17 }} />
+                  <Text style={{ fontSize: 15, color: 'white' }}>{item.profileName}</Text>
+                </View>
+              )
+            }}
           />
         </View>
       </View>
 
-      <View style={{flexDirection:'row',justifyContent:'center',  alignItems:'center', marginTop:19, padding:8, borderColor:'grey', borderWidth:1, borderRadius:33}}>
-        <Image source={require('../assets/icons/spekerrr.png')} style={{width:29, height:29 }}/>
-        <Text style={{marginLeft:9, color:'green', fontSize:18, fontWeight:'bold'}}>Boost status</Text>
+      <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: 19, padding: 8, borderColor: 'grey', borderWidth: 1, borderRadius: 33 }}>
+        <Image source={require('../assets/icons/spekerrr.png')} style={{ width: 29, height: 29 }} />
+        <Text style={{ marginLeft: 9, color: 'green', fontSize: 18, fontWeight: 'bold' }}>Boost status</Text>
       </View>
 
 
- 
+
       {/* Horizontal line */}
       <View style={styles.line}>
 
       </View>
-      
-      <View style={{marginTop:20, flexDirection:'row', alignItems:'center'}}>
-        <Text style={{color:'white', fontSize:20, fontWeight:'bold', flex:1}}>Channels</Text>
-        <Text style={{fontSize:18, color:'green'}}>Explore </Text>
-        <Image source ={require('../assets/icons/green arr.png')} style={{Width:20, height:20}}/>
+
+      <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center' }}>
+        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', flex: 1 }}>Channels</Text>
+        <Text style={{ fontSize: 18, color: 'green' }}>Explore </Text>
+        <Image source={require('../assets/icons/green arr.png')} style={{ Width: 20, height: 20 }} />
       </View>
 
+
+      {/* FLatlist */}
       <View>
-          
+        <FlatList
+          data={channels}
+          renderItem={({ item }) => {
+            return (
+              <View style={{flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
+                <Image source={item.statusPicture} style={{ width: 29, height: 29 }} />
+                <View>
+                  <Text style={{fontSize:19, fontWeight:'bold'}}>{item.title}</Text>
+                  <Text style={{fontSize:17}}>{item.message}</Text>
+                  <Text style={{fontSize:17, flex:1}}>{item.time}</Text>
+
+                </View>
+              </View>
+            )
+          }}
+
+        />
       </View>
 
 
-      </View>
+    </View>
   );
 };
 
@@ -120,10 +185,10 @@ const styles = StyleSheet.create({
   },
 
   line: {
-    marginTop:20,
-    height: 1,  
+    marginTop: 20,
+    height: 1,
     width: '100%',
-    backgroundColor: 'white', 
+    backgroundColor: 'white',
 
   }
 
