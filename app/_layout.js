@@ -8,12 +8,13 @@ const _layout = () => {
       id: 1,
       statusPicture: require('../assets/images/food.jpg'),
       title: "CHAMP TUTORIALS",
-      message: "welcome...welcome..and.."
+      message: "welcome...welcome..and..",
+      time: '3:30 PM'
 
     },
     {
       id: 2,
-      statusPicture: require('../assets/images/im2.jpg'),
+      statusPicture: require('../assets/images/facebook.png'),
       title: "NEWS & UPDATES",
       message: "check out our latest news...",
       time: '3:30 PM'
@@ -34,16 +35,30 @@ const _layout = () => {
     },
     {
       id: 5,
-      statusPicture: require('../assets/images/im2.jpg'),
-      title: "Pulse Nigeria",
+      statusPicture: require('../assets/images/react-logo.png'),
+      title: "React Africa",
       message: "check out our latest news...",
       time: '3:40 PM'
     },
     {
       id: 6,
-      statusPicture: require('../assets/images/im2.jpg'),
-      title: "Pulse Nigeria",
-      message: "check out our latest news...",
+      statusPicture: require('../assets/images/google.png'),
+      title: "Pulse africa",
+      message: "check out the latest news...",
+      time: '3:44 PM'
+    },
+    {
+      id: 7,
+      statusPicture: require('../assets/images/google.png'),
+      title: "Pulse Niger",
+      message: "check out the latest news...",
+      time: '3:44 PM'
+    },
+    {
+      id: 8,
+      statusPicture: require('../assets/images/google.png'),
+      title: "Google africa",
+      message: "check out the latest news...",
       time: '3:44 PM'
     },
 
@@ -70,17 +85,17 @@ const _layout = () => {
     },
     {
       id: 4,
-      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      profilePicture: require("../assets/images/woman-8205187_640.jpg"),
       profileName: 'Ayo'
     },
     {
       id: 5,
-      profilePicture: 'https://img.freepik.com/free-photo/portrait-shy-afroamerican-lady_23-2148440604.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
-      profileName: 'Ayo'
+      profilePicture:require('../assets/images/22.jpg'),
+      profileName: 'Bayo'
     },
     {
       id: 6,
-      profilePicture: 'https://img.freepik.com/free-photo/african-woman-posing-looking-up_23-2148747978.jpg?ga=GA1.1.1358480701.1725456940&semt=ais_hybrid',
+      profilePicture: require('../assets/images/laduy.jpg'),
       profileName: 'Bola'
     },
     {
@@ -140,10 +155,12 @@ const _layout = () => {
 
       </View>
 
-      <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center' }}>
-        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', flex: 1 }}>Channels</Text>
+      <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold',}}>Channels</Text>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Text style={{ fontSize: 18, color: 'green' }}>Explore </Text>
-        <Image source={require('../assets/icons/green arr.png')} style={{ Width: 20, height: 20 }} />
+        <Image source={require('../assets/icons/green arr.png')} style={{ Width: 20, height: 20 ,}} />
+        </View>
       </View>
 
 
@@ -153,13 +170,14 @@ const _layout = () => {
           data={channels}
           renderItem={({ item }) => {
             return (
-              <View style={{flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
-                <Image source={item.statusPicture} style={{ width: 29, height: 29 }} />
-                <View>
-                  <Text style={{fontSize:19, fontWeight:'bold'}}>{item.title}</Text>
-                  <Text style={{fontSize:17}}>{item.message}</Text>
-                  <Text style={{fontSize:17, flex:1}}>{item.time}</Text>
-
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
+                <Image source={item.statusPicture} style={{ width: 29, height: 29, borderRadius: 29 }} />
+                <View style={{ alignItems: 'center', flexDirection: 'row'}}>
+                  <View style={{flex:1, marginLeft: 15}}>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>{item.title}</Text>
+                    <Text style={{ fontSize: 13, color: 'grey' }}>{item.message}</Text>
+                  </View>
+                  <Text style={{fontSize: 17,  color: 'green',}}>{item.time}</Text>
                 </View>
               </View>
             )
