@@ -1,3 +1,5 @@
+// SIGN UP PAGE
+
 import { StyleSheet, Text,Button, View, Image, TextInput, StatusBar } from 'react-native'
 import React from 'react'
 // import { StatusBar } from 'expo-status-bar';

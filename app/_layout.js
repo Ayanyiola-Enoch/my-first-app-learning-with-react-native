@@ -1,3 +1,5 @@
+// Whatsapp clone
+
 import { StyleSheet, Text, View, Image, FlatList, ScrollView } from "react-native";
 import React from "react";
 
@@ -174,7 +176,7 @@ const _layout = () => {
                 <Image source={item.statusPicture} style={{ width: 29, height: 29, borderRadius: 29 }} />
                 <View style={{ alignItems: 'center', flexDirection: 'row'}}>
                   <View style={{flex:1, marginLeft: 15}}>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: 'white' }}>{item.title}</Text>
+                    <Text style={{ fontSize: 18, fontWeight: '400', color: 'white' }}>{item.title}</Text>
                     <Text style={{ fontSize: 13, color: 'grey' }}>{item.message}</Text>
                   </View>
                   <Text style={{fontSize: 17,  color: 'green',}}>{item.time}</Text>
@@ -190,7 +192,6 @@ const _layout = () => {
     </View>
   );
 };
-
 
 export default _layout;
 
@@ -233,7 +234,7 @@ const styles = StyleSheet.create({
 
 
 
-//profile scheme code below
+//profile scheme code below + yOUTUBE + SIGNIN
 // import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 // import React from "react";
 
@@ -336,6 +337,10 @@ const styles = StyleSheet.create({
 
 // });
 
+
+
+// LEARNING YOUTUBE 
+
 // import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
 // import React from 'react'
 
@@ -393,6 +398,8 @@ const styles = StyleSheet.create({
 //     }
 
 // })
+
+
 
 ///The below work on Signing in template
 
