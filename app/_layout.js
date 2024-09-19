@@ -25,7 +25,7 @@ const _layout = () => {
       id: 3,
       statusPicture: require('../assets/images/im2.jpg'),
       title: "Tech UPDATES",
-      message: "check out our latest Updates...",
+      message: "check out our latest Updat..",
       time: '3:35 PM'
     },
     {
@@ -92,7 +92,7 @@ const _layout = () => {
     },
     {
       id: 5,
-      profilePicture:require('../assets/images/22.jpg'),
+      profilePicture: require('../assets/images/22.jpg'),
       profileName: 'Bayo'
     },
     {
@@ -110,7 +110,6 @@ const _layout = () => {
   ]
 
   return (
-
 
 
     <View style={styles.page}>
@@ -135,7 +134,7 @@ const _layout = () => {
             showsHorizontalScrollIndicator={true}
             renderItem={({ item }) => {
               return (
-                <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+                <View style={{alignItems: 'center', justifyContent: 'center' }}>
                   <Image source={item.profilePicture} style={{ width: 50, height: 50, borderRadius: 50, marginRight: 17 }} />
                   <Text style={{ fontSize: 15, color: 'white' }}>{item.profileName}</Text>
                 </View>
@@ -152,16 +151,16 @@ const _layout = () => {
 
 
 
-      {/* Horizontal line */}
+      {/* Horizontal line */}r
       <View style={styles.line}>
 
       </View>
 
       <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold',}}>Channels</Text>
-        <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <Text style={{ fontSize: 18, color: 'green' }}>Explore </Text>
-        <Image source={require('../assets/icons/green arr.png')} style={{ Width: 20, height: 20 ,}} />
+        <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', }}>Channels</Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Text style={{ fontSize: 18, color: 'green' }}>Explore </Text>
+          <Image source={require('../assets/icons/green arr.png')} style={{ Width: 20, height: 20, }} />
         </View>
       </View>
 
@@ -172,14 +171,17 @@ const _layout = () => {
           data={channels}
           renderItem={({ item }) => {
             return (
-              <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20, flex: 1 }}>
                 <Image source={item.statusPicture} style={{ width: 29, height: 29, borderRadius: 29 }} />
-                <View style={{ alignItems: 'center', flexDirection: 'row'}}>
-                  <View style={{flex:1, marginLeft: 15}}>
+                <View style={{ flexDirection: 'row', }}>
+                  <View style={{marginLeft: 15 }}>
                     <Text style={{ fontSize: 18, fontWeight: '400', color: 'white' }}>{item.title}</Text>
                     <Text style={{ fontSize: 13, color: 'grey' }}>{item.message}</Text>
                   </View>
-                  <Text style={{fontSize: 17,  color: 'green',}}>{item.time}</Text>
+                  <View style={{ alignItems:'flex-end'}}>
+                    <Text style={{ fontSize: 17, color: 'green', }}>{item.time}</Text>
+                    <Image source={require('../assets/icons/num.png')} style={{width:20, height:20}} />
+                  </View>
                 </View>
               </View>
             )
@@ -339,7 +341,7 @@ const styles = StyleSheet.create({
 
 
 
-// LEARNING YOUTUBE 
+// LEARNING YOUTUBE
 
 // import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
 // import React from 'react'
